@@ -3,8 +3,12 @@ from typing import Dict
 
 # Controlla il file readme.md per i dettagli su ciascun sub-task
 
-def calcola_derivata(espressione: str, variabile: str) -> sympy.Expr:
-    """Sub-task 1: Calcolare una Derivata."""
+def calcola_derivata(espressione: str,variabile: str) -> sympy.Expr:
+    import sympy as sp
+    x = sp.Symbol('x')
+    y = espressione
+    yd = sp.diff(y, x)
+    return yd
     pass
 
 def calcola_integrale_definito(espressione: str, variabile: str, estremo_inf: float, estremo_sup: float) -> sympy.Expr:
@@ -24,7 +28,7 @@ def risolvi_sistema_lineare(eq1: str, eq2: str, var1: str, var2: str) -> Dict[sy
     pass
 
 def main():
-    print("Sub-task 1:", calcola_derivata("x**3 + 2*x", "x"))
+    print("Sub-task 1:", calcola_derivata("4*x+5", "x"))
     print("Sub-task 2:", calcola_integrale_definito("x**2", "x", 0, 3))
     print("Sub-task 3:", calcola_limite("sin(x)/x", "x", "0"))
     print("Sub-task 4:", calcola_polinomio_taylor("exp(x)", "x", 0.0, 4))
