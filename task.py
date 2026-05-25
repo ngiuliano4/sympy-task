@@ -29,8 +29,7 @@ def calcola_polinomio_taylor(espressione: str, variabile: str, punto: float, ord
     expr = series(espressione, variabile,punto,ordine)
     return expr
     pass
-d
-ef risolvi_sistema_lineare(eq1: str, eq2: str, var1: str, var2: str) -> Dict[sympy.Symbol, sympy.Expr]:
+def risolvi_sistema_lineare(eq1: str, eq2: str, var1: str, var2: str) -> Dict[sympy.Symbol, sympy.Expr]:
 
     pass
 
